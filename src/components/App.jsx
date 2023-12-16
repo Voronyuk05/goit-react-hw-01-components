@@ -1,16 +1,15 @@
-export const App = () => {
+import { Statistics } from "./Statistics/Statistics.jsx";
+import { FriendList } from "./FriendList/FriendList.jsx";
+import data from '../data.json'
+
+export function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+    <>
+      <Statistics
+        title='Upload stats'
+        stats={data}
+      />
+      <FriendList />
+    </>
+  )
+}
